@@ -139,7 +139,7 @@ const verify = (req, res, next) => __awaiter(void 0, void 0, void 0, function* (
     }
     catch (err) {
         // console.log(err);
-        res.status(401).send(err);
+        res.status(401).send({ error: "Key token expirado, vuelva a generarlo." });
     }
 });
 exports.verify = verify;

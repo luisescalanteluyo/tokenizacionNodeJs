@@ -163,7 +163,7 @@ export const verify = async(req:Request,res:Response, next: NextFunction) =>{
       res.send(redisModel.data);
     } catch (err) {
        // console.log(err);
-        res.status(401).send(err);
+        res.status(401).send({error:"Key token expirado, vuelva a generarlo." });
       }
 };
 
